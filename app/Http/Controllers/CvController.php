@@ -71,9 +71,10 @@ class CvController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show()
     {
-        //
+        $cvs = cv_info::all();
+        return view("manage", compact("cvs"));
     }
 
     /**
@@ -98,5 +99,11 @@ class CvController extends Controller
     public function destroy(string $id)
     {
         //
+    }
+    public function view($id)
+    {
+        $cv = cv_info::find($id);
+        return view('view', compact("cv"));
+
     }
 }

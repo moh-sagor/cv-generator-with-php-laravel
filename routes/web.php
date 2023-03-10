@@ -17,3 +17,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [CvController::class, 'index'])->name('index');
 Route::post('/store', [CvController::class, 'store'])->name('store');
+Route::get('/showcv', [CvController::class, 'show'])->name('showcv');
+Route::get('/viewcv/{id}', [CvController::class, 'view'])->name('viewcv');

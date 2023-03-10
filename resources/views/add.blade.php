@@ -18,6 +18,7 @@
         <form action="{{route('store')}}" method="POST" enctype="multipart/form-data">
             @csrf 
       <div class="row">
+        <a class="btn btn-sm btn-info" href="{{route('showcv')}}">Dashboard</a>
         <div class="col-md-8 col-8">
             <label for="name" class="col-sm-3 col-form-label">Name: </label>
                 <div class="col-sm-8">
